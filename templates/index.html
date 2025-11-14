@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAC - Build. Advance. Create.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a; /* Very dark grey, almost black */
+            color: #e5e5e5; /* Light grey text */
+        }
+        /* Custom gradient for the hero section */
+        .hero-gradient {
+            background: linear-gradient(180deg, rgba(10, 10, 10, 0) 0%, #0a0a0a 100%), 
+                        radial-gradient(ellipse at 50% -20%, rgba(0, 122, 255, 0.3), rgba(10, 10, 10, 0) 70%);
+        }
+        /* Custom gradient for the "Build, Advance, Create" text */
+        .text-gradient {
+            background: -webkit-linear-gradient(left, #4f46e5, #00bfff); /* Indigo to Deep Sky Blue */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Simple focus styles for accessibility */
+        input:focus {
+            box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.5);
+            outline: none;
+        }
+        /* NEW: Add a style for error messages */
+        .form-error {
+            color: #f87171; /* Tailwind red-400 */
+            font-size: 0.875rem;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="container mx-auto px-6 py-6 max-w-6xl">
+        <nav class="flex items-center justify-between">
+            <div class="flex items-center">
+                <span class="text-3xl font-extrabold text-white">BAC</span>
+            </div>
+            <div class="hidden sm:block">
+                <p class="text-sm font-medium text-gray-400 tracking-wider">Build. Advance. Create.</p>
+            </div>
+            <a href="#signup" class="bg-blue-600 text-white px-5 py-2 rounded-lg text-sm font-semibold shadow-lg hover:bg-blue-700 transition-colors duration-200">
+                Get Updates
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-gradient pt-24 pb-32 text-center">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <h1 class="text-5xl md:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-gray-100 via-gray-200 to-white mb-6 leading-tight">
+                    Engineering the Future, Today.
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10">
+                    BAC is a technology consortium building the next generation of solutions in AI, defence, and augmented reality. We're currently in stealth.
+                </p>
+                <a href="#signup" class="bg-white text-black px-8 py-4 rounded-lg text-base font-bold shadow-2xl hover:bg-gray-200 transition-transform duration-200 hover:scale-105">
+                    Join Our Mission & Get Updates
+                </a>
+            </div>
+        </section>
+
+        <section class="container mx-auto px-6 py-24 max-w-6xl" id="vision">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-white">Our Vision is Our Roadmap</h2>
+                <p class="text-lg text-gray-400 mt-4">We are executing a three-phase plan to change how we interact with technology.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <div class="bg-gray-900 p-8 rounded-2xl border border-gray-800 transition-all duration-300 hover:border-blue-600 hover:shadow-2xl hover:shadow-blue-900/20">
+                    <h3 class="text-4xl font-black mb-4">
+                        <span class="text-gradient">Build.</span>
+                    </h3>
+                    <p class="text-sm font-semibold uppercase text-blue-400 mb-2">Phase 1: Commercial Platforms</p>
+                    <p class="text-gray-300">
+                        We are building an AI-powered platform to revolutionize the commercial electronics market, making security and smart home design instant, visual, and accessible for everyone.
+                    </p>
+                </div>
+
+                <div class="bg-gray-900 p-8 rounded-2xl border border-gray-800 transition-all duration-300 hover:border-blue-600 hover:shadow-2xl hover:shadow-blue-900/20">
+                    <h3 class="text-4xl font-black mb-4">
+                        <span class="text-gradient">Advance.</span>
+                    </h3>
+                    <p class="text-sm font-semibold uppercase text-blue-400 mb-2">Phase 2: Public & Defence AI</p>
+                    <p class="text-gray-300">
+                        We will advance public safety by deploying proactive AI for threat detection. In parallel, we are developing autonomous guidance systems for defence and logistics.
+                    </p>
+                </div>
+
+                <div class="bg-gray-900 p-8 rounded-2xl border border-gray-800 transition-all duration-300 hover:border-blue-600 hover:shadow-2xl hover:shadow-blue-900/20">
+                    <h3 class="text-4xl font-black mb-4">
+                        <span class="text-gradient">Create.</span>
+                    </h3>
+                    <p class="text-sm font-semibold uppercase text-blue-400 mb-2">Phase 3: Next-Gen R&D</p>
+                    <p class="text-gray-300">
+                        We will create new hardware for a new reality. Our "Holo-View" project merges cameras and projectors to create "real-life" holographic interactions without a headset.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class="bg-gray-900 py-24" id="signup">
+            <div class="container mx-auto px-6 max-w-2xl text-center">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4">Stay Informed.</h2>
+                <p class="text-lg text-gray-300 mb-8">
+                    We are building a community of investors, partners, and early adopters. Be the first to know about our progress, product launches, and investment opportunities.
+                </p>
+
+                <form id="signup-form" class="flex flex-col md:flex-row gap-4 max-w-lg mx-auto">
+                    {% csrf_token %}
+                    <label for="email" class="sr-only">Email address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required 
+                           class="flex-grow p-4 rounded-lg bg-gray-800 text-white border border-gray-700 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/50">
+                    <button type="submit" 
+                            class="bg-blue-600 text-white px-8 py-4 rounded-lg text-base font-bold shadow-lg hover:bg-blue-700 transition-colors duration-200">
+                        Get Updates
+                    </button>
+                </form>
+
+                <div id="form-message" class="hidden mt-6 text-lg font-semibold">
+                    <p></p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="container mx-auto px-6 py-10 max-w-6xl">
+        <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+            <p class="text-sm text-gray-500">
+                &copy; 2025 Bejadi A Consortium pvt ltd. All rights reserved.
+            </p>
+            <div class="flex gap-4 mt-4 md:mt-0">
+                <a href="#" class="text-gray-500 hover:text-white transition-colors">LinkedIn</a>
+                <a href="#" class="text-gray-500 hover:text-white transition-colors">X (Twitter)</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const form = document.getElementById('signup-form');
+        const messageDiv = document.getElementById('form-message');
+        const messageText = messageDiv.querySelector('p');
+        
+        // Get the CSRF token from the template
+        const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Stop the default form submission
+            
+            const email = document.getElementById('email').value;
+
+            // Send the data to your Django view using fetch
+            fetch(window.location.href, { // Submits to the current page URL
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': csrfToken // Include the CSRF token
+                },
+                body: JSON.stringify({ 'email': email })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    // Success!
+                    form.classList.add('hidden');
+                    messageText.textContent = data.message;
+                    messageDiv.className = 'mt-6 text-lg text-green-400 font-semibold'; // Green text
+                    messageDiv.classList.remove('hidden');
+                } else {
+                    // Handle errors (e.g., "email already subscribed")
+                    messageText.textContent = data.message;
+                    messageDiv.className = 'form-error text-center'; // Red text
+                    messageDiv.classList.remove('hidden');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                messageText.textContent = 'An unexpected error occurred. Please try again.';
+                messageDiv.className = 'form-error text-center';
+                messageDiv.classList.remove('hidden');
+            });
+        });
+    </script>
+
+</body>
+</html>
+```eof
